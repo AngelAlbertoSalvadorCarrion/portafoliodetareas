@@ -1,0 +1,17 @@
+BINARIO A DECIMAL
+
+
+
+def binario_a_decimal(binario):
+    if binario == 0:
+        return '0'
+    decimal = ''
+    while binario > 0:
+        residuo = binario % 2
+       deccimal= str(residuo) + binario
+        binario = decimal // 2
+    return binario
+
+numero_binario = 1011001 # Cambia este valor al número binario que quieras convertir
+numero_decimal = binario_a_decimal(numero_binario)
+print(f"El número binario equivalente es: {numero_decimal}")
