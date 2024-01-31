@@ -1,0 +1,53 @@
+#!/bin/bash
+
+# Función para crear un árbol de directorios
+crear_arbol() {
+    echo "Creando un árbol de directorios..."
+    # Puedes personalizar el árbol de directorios según tus necesidades
+    mkdir -p directorio1/subdirectorio1
+    mkdir -p directorio2/subdirectorio2
+    echo "Árbol de directorios creado."
+}
+
+# Función para el script de hola mundo
+hola_mundo() {
+    echo "Hola, mundo!"
+}
+
+# Función para el script de saludo usando variables
+saludo_con_variables() {
+    nombre="Usuario"
+    echo "Hola, $nombre. ¡Bienvenido!"
+}
+
+# Menú principal
+while true; do
+    echo "==== Menú ===="
+    echo "1. Crear árbol de directorios"
+    echo "2. Hola Mundo"
+    echo "3. Saludo con variables"
+    echo "4. Salir"
+
+    read -p "Seleccione una opción (1-4): " opcion
+
+    case $opcion in
+        1)
+            crear_arbol
+            ;;
+        2)
+            hola_mundo
+            ;;
+        3)
+            saludo_con_variables
+            ;;
+        4)
+            echo "Saliendo del menú."
+            exit 0
+            ;;
+        *)
+            echo "Opción no válida. Inténtelo de nuevo."
+            ;;
+    esac
+
+done
+
